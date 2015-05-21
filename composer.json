@@ -1,0 +1,23 @@
+{
+  "name": "bianjp/aliyun-oss",
+  "type": "library",
+  "description": "阿里云OSS官方SDK的Composer封装",
+  "keywords": ["AliyunOSS", "aliyun", "OSS"],
+  "homepage": "https://github.com/bianjp/aliyun-oss-php",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "ext-iconv": "*"
+  },
+  "authors": [
+    {
+      "name": "Bian Jiaping",
+      "email": "ssbianjp@gmail.com"
+    }
+  ],
+  "autoload": {
+    "classmap": ["sdk.class.php"]
+  }
+}
