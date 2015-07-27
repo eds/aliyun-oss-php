@@ -2313,31 +2313,31 @@ class ALIOSS{
 	 * @return void
 	 */
 	private function log($msg){
-		if(defined('ALI_LOG_PATH') ){
-			$log_path = ALI_LOG_PATH;
-			if(empty($log_path) || !file_exists($log_path)){
-				throw new OSS_Exception($log_path.OSS_LOG_PATH_NOT_EXIST);
-			}
-		}else{
-			$log_path = dirname(__FILE__).DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR;
-		}
+		// if(defined('ALI_LOG_PATH') ){
+		// 	$log_path = ALI_LOG_PATH;
+		// 	if(empty($log_path) || !file_exists($log_path)){
+		// 		throw new OSS_Exception($log_path.OSS_LOG_PATH_NOT_EXIST);
+		// 	}
+		// }else{
+		// 	$log_path = dirname(__FILE__).DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR;
+		// }
 
-		//检测日志目录是否存在
-		if(!file_exists($log_path)){
-			throw new OSS_Exception(OSS_LOG_PATH_NOT_EXIST);
-		}
+		// //检测日志目录是否存在
+		// if(!file_exists($log_path)){
+		// 	throw new OSS_Exception(OSS_LOG_PATH_NOT_EXIST);
+		// }
 
-		$log_name = $log_path.'oss_sdk_php_'.date('Y-m-d').'.log';
+		// $log_name = $log_path.'oss_sdk_php_'.date('Y-m-d').'.log';
 
-		if(ALI_DISPLAY_LOG){
-			echo $msg."\n<br/>";
-		}
+		// if(ALI_DISPLAY_LOG){
+		// 	echo $msg."\n<br/>";
+		// }
 
-		if(ALI_LOG){
-			if(!error_log(date('Y-m-d H:i:s')." : ".$msg."\n", 3,$log_name)){
-				throw new OSS_Exception(OSS_WRITE_LOG_TO_FILE_FAILED);
-			}
-		}
+		// if(ALI_LOG){
+		// 	if(!error_log(date('Y-m-d H:i:s')." : ".$msg."\n", 3,$log_name)){
+		// 		throw new OSS_Exception(OSS_WRITE_LOG_TO_FILE_FAILED);
+		// 	}
+		// }
 	}
 
 
